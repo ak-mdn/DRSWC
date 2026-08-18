@@ -1,0 +1,17 @@
+{
+  "name": "drswc-motion-studies",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "engines": { "node": ">=22.16.0" },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "@fontsource/cormorant-garamond": "^5.2.5",
+    "@fontsource/manrope": "^5.2.5",
+    "astro": "^5.10.0"
+  }
+}

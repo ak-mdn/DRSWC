@@ -1,0 +1,77 @@
+/**
+ * The O Concept™ — motion studies, design tokens.
+ *
+ * Deliberately NOT the main site's global.css. The studies use no Tailwind
+ * utilities at all — every class on the page is hand-written — so pulling in
+ * the framework and the site's full component layer would ship ~120 KB of CSS
+ * that nothing here references. These are only the tokens the scenes and the
+ * page chrome actually read.
+ */
+
+:root {
+  /* Ultra-luxury palette: warm obsidian ground, champagne and rose-gold metals.
+     No teal — the direction rules out clinical blues. */
+  --color-inkdeep: #0e0f13;
+  --color-ink: #131419;
+  --color-ink2: #191b21;
+  --color-cream: #f4f1ec;
+  --color-gold: #c9a96e;
+  --color-goldlight: #e3c992;
+  --color-rose: #d9a4a4;
+
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Manrope", ui-sans-serif, system-ui, -apple-system, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: var(--color-ink);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-ink);
+  color: var(--color-cream);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "kern" 1, "liga" 1;
+}
+
+h1,
+h2,
+h3,
+p,
+figure,
+ul {
+  margin: 0;
+}
+
+::selection {
+  background: rgba(201, 169, 110, 0.28);
+  color: #f4f1ec;
+}
+
+:focus-visible {
+  outline: 1px solid rgba(201, 169, 110, 0.75);
+  outline-offset: 3px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-ink);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(201, 169, 110, 0.45);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(201, 169, 110, 0.8);
+}
